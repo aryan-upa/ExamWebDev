@@ -105,25 +105,35 @@ header > p {
     padding-bottom: 2rem;
 }
 
+.img-content {
+    transition: 0.5s linear;
+}
+
 .images > .img-content > a > img {
     width: 100%;
     height: auto;
     overflow-y: hidden;
     border-radius: 1rem;
-    transition: 0.5s linear;
 }
 
 .img-content > h2 {
     color: black;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.2s linear;
 }
 
-.images > .img-content > a > img:hover {
-    content: "";
-    filter: grayscale(1);
+.img-content:hover {
+    filter: grayscale(50%);
+}
+
+.img-content:hover .h2-over {
+    visibility: visible;
+    scale: 1.4;
 }
 
 .book-trial {
@@ -173,27 +183,34 @@ footer {
 
 .contents > .photography > h2 {
     font-size: 36px;
+    margin-bottom: 1rem;
 }
 
 .contents > .photography > p {
     font-size: 18px;
     opacity: 70%;
+    margin-bottom: 1rem;
 }
 
 .circ-icon {
+    margin-top: 1rem;
     display: flex;
     column-gap: 1rem;
 }
 
 .circ-icon > a {
-    padding: 1rem;
-    border-radius: 50%;
-    border: 1px solid white;
     color: #29d9d5;
+}
+
+.circ-icon > a > i {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    padding: 1em 1.2em;
     transition: 0.2s linear;
 }
 
-.circ-icon > a:hover {
+.circ-icon > a:hover i {
     background: #29d9d5;
     color: black;
 }
@@ -201,15 +218,12 @@ footer {
 .contact > h2 {
     text-align: center;
     font-size: 36px;
+    margin-bottom: 2rem;
 }
 
 .contact > p {
     text-align: center;
     font-size: 18px;
-}
-
-.newsletter {
-
 }
 
 .newsletter > h2 {
